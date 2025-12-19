@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="Ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits</title>
+</head>
+<body>
+    <h1>과일 목록</h1>
+    <ul>
+        {% for fruit in fruits %}
+            {% if fruit == "사과" %}
+                <li>🍎{{ fruit }}</li>
+            {% else %}
+                <li>{{ fruit }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
+
+
+
+
+
