@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유저 목록</title>
+</head>
+<body>
+
+    <h1>유저 목록</h1>
+    <table border="1">
+        <thead>
+            <th>User_name</th>
+            <th>Name</th>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>&emsp;{{ user.username }}&emsp;</td>
+                    <td>&emsp;{{ user.name }}&emsp;</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+</html>
