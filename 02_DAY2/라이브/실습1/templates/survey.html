@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %} 설문 조사 {% endblock %}
+
+{% block content %}
+  <h2>설문 조사</h2>
+  <!-- TODO: /result 라우트로 GET 요청을 보내주세요 -->
+  <form action="/result" method="get">
+      <!-- TODO: questions 리스트의 각 항목을 q로 꺼내 반복 출력해주세요 -->
+    
+      {% for question in questions %}
+      <p>
+        {{ loop.index }} {{ question }}
+        <input type="text" name="answer">
+      </p>
+      {% endfor %}
+
+    <button type="submit">제출</button>
+  </form>
+
+{% endblock %}
+
